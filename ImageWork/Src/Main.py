@@ -9,5 +9,15 @@ from image_functions import *
 im = Image.open("SiriusAndViolet.jpg")
 print(im.width, im.height, im.mode, im.format)  # Display some info about the image
 
-my_image = load_image("XSiriusAndViolet.jpg")
-my_image.show(my_image)
+#my_image = load_image("XSiriusAndViolet.jpg")
+#my_image.show(my_image)
+
+
+# Make use of crop_image
+# 1. Load an image
+# 2. Call crop_image and save what it returns
+#3. Call show to display the results
+
+im = Image.open("SiriusAndViolet.jpg")  
+im_cropped = crop_image(im, (200,300,400,500))
+im_cropped.show()
